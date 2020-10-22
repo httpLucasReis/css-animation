@@ -1,0 +1,91 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100vh;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+div {
+  margin-left: 10px;
+}
+
+.circle {
+  width: 100px;
+  height: 100px;
+  background: blue;
+
+  border-radius: 50%;
+
+  animation-name: example2; /* What is animation i want */
+  animation-duration: 6s;  /*  Time of animation */
+  animation-delay: 3s;     /* When the animation starts */
+  animation-iteration-count: infinite; /* How many times an animation should run*/
+}
+
+.circle2 {
+  width: 100px;
+  height: 100px;
+  background: green;
+
+  border-radius: 50%;
+
+  animation-name: example3;
+  animation-duration: 4s; 
+}
+
+.circle3 {
+  width: 100px;
+  height: 100px;
+  background: green;
+
+  position: absolute;
+
+  animation-name: example4;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  /* animation-duration: alternate; */ /* Run Animation in Reverse Direction or Alternate Cycles */
+}
+
+
+/* Creating animation */
+
+@keyframes example {
+  from  {
+    background-color: red; 
+  }
+
+  to {
+    background-color: yellow;
+  } 
+}
+
+@keyframes example2 {
+  0% { background-color: red; left: 0px; top: 0px;}
+  25% { background-color: yellow; left: 200px; top: 0px;}
+  0% { background-color: green; left: 200px; top: 200px;}
+  0% { background-color: blue; left: 0px; top: 200px;}
+  0% { background-color: pink; left: 0px; top: 0px;}
+}
+
+@keyframes example3 {
+  0% { background-color: red; top: 0px; left: 0px}
+  50% { background-color: blue; top: 335px; left: 0px;}
+  100% { background-color: yellow; top: 335px; left: 500px;}
+}
+
+@keyframes example4 {
+  0% { top: 0px; left: 0px}
+  25% { top: 400px; left: 0px;}
+  50% { top: 400px; left: 400px ;}
+  75% { top: 0px; left: 400px;}
+  100% { top: 0px; left: 0px}
+}
